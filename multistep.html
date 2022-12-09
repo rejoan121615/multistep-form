@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+        <script>
+            window.console = window.console || function (t) {};
+        </script>
+
+        <script>
+            if (document.location.search.match(/type=embed/gi)) {
+                window.parent.postMessage("resize", "*");
+            }
+        </script>
+    </head>
+
+    <body translate="no">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div
+                    class="col-11 col-sm-10 col-md-10 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2"
+                >
+                    <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                        <h2 id="heading">Setup your Flow For Number:</h2>
+                        <p>Fill all form field to go to next step</p>
+                        <form id="msform">
+                            <!-- progressbar -->
+                            <ul id="progressbar">
+                                <li class="active" id="account">
+                                    <strong>Flow Information</strong>
+                                </li>
+                                <li id="personal">
+                                    <strong>Business Hours</strong>
+                                </li>
+                                <li id="payment"><strong>Languges</strong></li>
+                                <li id="exxtension">
+                                    <strong>Extension</strong>
+                                </li>
+                                <li id="confirm"><strong>Finish</strong></li>
+                            </ul>
+                            <div class="progress">
+                                <div
+                                    class="progress-bar progress-bar-striped progress-bar-animated"
+                                    role="progressbar"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                ></div>
+                            </div>
+                            <br />
+                            <!-- fieldsets -->
+                            <fieldset>
+                                <div class="form-card">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <!--<h2 class="fs-title">Anwser using Day Greeting!</h2>-->
+                                        </div>
+                                        <div class="col-5">
+                                            <h2 class="steps">Step 1 - 4</h2>
+                                        </div>
+                                    </div>
+                                    <label class="fieldlabels"
+                                        >Anwser using Day Greeting!
+                                        <input
+                                            id="mycheck"
+                                            type="checkbox"
+                                            name="greet"
+                                    /></label>
+                                    <!--<label class="fieldlabels">Good Morning: *<input type="Radio" name="greet" value="Morning" /></label> 
+                                    <label class="fieldlabels">Good Afternoon: *<input type="Radio" name="greet" value="Afternoon" /></label> 
+                                    <label class="fieldlabels">Good Evenning: *<input type="Radio" name="greet" value="Evenning" /></label> -->
+                                    <br />
+                                    <label class="fieldlabels"
+                                        >Company Name: *<input
+                                            type="text"
+                                            name="company_name"
+                                            id="company_name"
+                                            placeholder="Enter Company"
+                                            required
+                                    /></label>
+                                </div>
+                                <input
+                                    type="button"
+                                    name="next"
+                                    class="next valid action-button"
+                                    value="Next"
+                                />
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="fs-title">
+                                                What is your Working Hours?
+                                            </h2>
+                                        </div>
+                                        <div class="col-5">
+                                            <h2 class="steps">Step 2 - 4</h2>
+                                        </div>
+                                    </div>
+                                    <!--<label class="fieldlabels">What is your Working Hours?</label><br> -->
+                                    <label class="fieldlabels"
+                                        >Monday:<input
+                                            type="checkbox"
+                                            name="weekend[]"
+                                            value="Monday"
+                                    /></label>
+                                    <label class="fieldlabels"
+                                        >Tuesday:<input
+                                            type="checkbox"
+                                            name="weekend[]"
+                                            value="Tuesday"
+                                    /></label>
+                                    <label class="fieldlabels"
+                                        >Wednesday:<input
+                                            type="checkbox"
+                                            name="weekend[]"
+                                            value="Wednesday"
+                                    /></label>
+                                    <label class="fieldlabels"
+                                        >Thursday:<input
+                                            type="checkbox"
+                                            name="weekend[]"
+                                            value="Thursday"
+                                    /></label>
+                                    <label class="fieldlabels"
+                                        >Friday:<input
+                                            type="checkbox"
+                                            name="weekend[]"
+                                            value="Friday"
+                                    /></label>
+                                    <label class="fieldlabels"
+                                        >Saturday:<input
+                                            type="checkbox"
+                                            name="weekend[]"
+                                            value="Saturday"
+                                    /></label>
+                                    <label class="fieldlabels"
+                                        >Sunday:<input
+                                            type="checkbox"
+                                            name="weekend[]"
+                                            value="Sunday"
+                                    /></label>
+                                </div>
+                                <input
+                                    type="button"
+                                    name="next"
+                                    class="next valid_1 action-button"
+                                    value="Next"
+                                />
+                                <input
+                                    type="button"
+                                    name="previous"
+                                    class="previous action-button-previous"
+                                    value="Previous"
+                                />
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="fs-title">
+                                                Would you like to have ENGLISH
+                                                and Spanish Prompt?
+                                            </h2>
+                                        </div>
+                                        <div class="col-5">
+                                            <h2 class="steps">Step 3 - 4</h2>
+                                        </div>
+                                    </div>
+                                    <!--<label class="fieldlabels">Would you like to have  ENGLISH and Spanish Prompt?</label><br>-->
+                                    <label class="fieldlabels"
+                                        >Yes<input
+                                            type="Radio"
+                                            name="spanish"
+                                            id="radioID"
+                                            value="on"
+                                            placeholder=""
+                                    /></label>
+                                    <label class="fieldlabels"
+                                        >No<input
+                                            type="Radio"
+                                            name="spanish"
+                                            id="radioID2"
+                                            value="off"
+                                            placeholder=""
+                                    /></label>
+                                    <br />
+                                    <!--spanish message checkbox areas-->
+                                    <div id="spanish_play_1"></div>
+                                    <!--english message checkbox areas-->
+                                    <div id="english_play_1"></div>
+                                </div>
+                                <input
+                                    type="button"
+                                    name="next"
+                                    class="next valid_2 action-button"
+                                    value="Next"
+                                />
+                                <input
+                                    type="button"
+                                    name="previous"
+                                    class="previous action-button-previous"
+                                    value="Previous"
+                                />
+                            </fieldset>
+
+                            <!---->
+                            <fieldset>
+                                <div class="form-card">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="fs-title">
+                                                Extensions Setting
+                                            </h2>
+                                            <p>
+                                                Mnium of One Extension is
+                                                Required
+                                            </p>
+                                        </div>
+                                        <div class="col-5">
+                                            <h2 class="steps">Step 4 - 5</h2>
+                                        </div>
+                                    </div>
+                                    <input
+                                        id="mycheck"
+                                        type="checkbox"
+                                        class="extension"
+                                        name="extension"
+                                    />
+                                    <label class="fieldlabels"
+                                        >If you know your party’s extension
+                                        Please check the Checkbox!</label
+                                    >
+                                    <br />
+                                    <label class="fieldlabels"
+                                        >Ext 1: *<input
+                                            type="text"
+                                            name="ext1"
+                                            id="ext1"
+                                            placeholder="Enter ext Number"
+                                            required
+                                    /></label>
+                                    <br />
+                                    <label class="fieldlabels"
+                                        >Ext 2: *<input
+                                            type="text"
+                                            name="ext2"
+                                            id="ext2"
+                                            placeholder="Enter ext Number"
+                                    /></label>
+
+                                    <br />
+                                    <!--<p>If agent is busy send Voice mail from user to email or number</p>-->
+                                    <label class="fieldlabels"
+                                        >Send user message to GMail Optional If
+                                        No Answer *<input
+                                            type="text"
+                                            name="voice_to_email"
+                                            id="voice_to_email"
+                                            placeholder="Enter Your Email "
+                                    /></label>
+                                    <br />
+                                    <label class="fieldlabels"
+                                        >Send user message to Number Optional If
+                                        No Answer*<input
+                                            type="text"
+                                            name="voice_to_number"
+                                            id="voice_to_number"
+                                            placeholder="Enter Your Number"
+                                    /></label>
+
+                                </div>
+                                <input
+                                    type="button"
+                                    name="next"
+                                    id="submission"
+                                    class="next valid_3 action-button"
+                                    value="Submit"
+                                />
+                                <input
+                                    type="button"
+                                    name="previous"
+                                    class="previous action-button-previous"
+                                    value="Previous"
+                                />
+                            </fieldset>
+                            <!---->
+
+                            <fieldset>
+                                <div class="form-card">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="fs-title">Finish:</h2>
+                                        </div>
+                                        <div class="col-5">
+                                            <h2 class="steps">Step 5 - 5</h2>
+                                        </div>
+                                    </div>
+                                    <br /><br />
+                                    <h2 class="purple-text text-center">
+                                        <strong>SUCCESS !</strong>
+                                    </h2>
+                                    <br />
+                                    <div class="row justify-content-center">
+                                        <div class="col-3">
+                                            <img
+                                                src="https://i.imgur.com/GwStPmg.png"
+                                                class="fit-image"
+                                            />
+                                        </div>
+                                    </div>
+                                    <br /><br />
+                                    <div class="row justify-content-center">
+                                        <div class="col-7 text-center">
+                                            <h5 class="purple-text text-center">
+                                                You Have Successfully Signed Up
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            /*    $(document).ready(function(){
+    $('.valid_3').on('click',function(){
+        if($('#ext1').val().length == 0){
+                     alert("Please Enter the Company Name");
+                     valid = false;
+                     return false;
+       }
+    })
+});*/
+        </script>
+        <script id="rendered-js">
+            $(document).ready(function () {
+                var current_fs, next_fs, previous_fs; //fieldsets
+                var opacity;
+                var current = 1;
+                var steps = $("fieldset").length;
+
+                setProgressBar(current);
+
+                $(".next").click(function () {
+                    current_fs = $(this).parent();
+                    next_fs = $(this).parent().next();
+
+                    //Add Class Active
+                    $("#progressbar li")
+                        .eq($("fieldset").index(next_fs))
+                        .addClass("active");
+
+                    //show the next fieldset
+                    next_fs.show();
+                    //hide the current fieldset with style
+                    current_fs.animate(
+                        { opacity: 0 },
+                        {
+                            step: function (now) {
+                                // for making fielset appear animation
+                                opacity = 1 - now;
+
+                                current_fs.css({
+                                    display: "none",
+                                    position: "relative",
+                                });
+
+                                next_fs.css({ opacity: opacity });
+                            },
+                            duration: 500,
+                        }
+                    );
+
+                    setProgressBar(++current);
+                });
+
+                $(".previous").click(function () {
+                    current_fs = $(this).parent();
+                    previous_fs = $(this).parent().prev();
+
+                    //Remove class active
+                    $("#progressbar li")
+                        .eq($("fieldset").index(current_fs))
+                        .removeClass("active");
+
+                    //show the previous fieldset
+                    previous_fs.show();
+
+                    //hide the current fieldset with style
+                    current_fs.animate(
+                        { opacity: 0 },
+                        {
+                            step: function (now) {
+                                // for making fielset appear animation
+                                opacity = 1 - now;
+
+                                current_fs.css({
+                                    display: "none",
+                                    position: "relative",
+                                });
+
+                                previous_fs.css({ opacity: opacity });
+                            },
+                            duration: 500,
+                        }
+                    );
+
+                    setProgressBar(--current);
+                });
+
+                function setProgressBar(curStep) {
+                    var percent = parseFloat(100 / steps) * curStep;
+                    percent = percent.toFixed();
+                    $(".progress-bar").css("width", percent + "%");
+                }
+
+                $(".submit").click(function () {
+                    return false;
+                });
+            });
+            //# sourceURL=pen.js
+        </script>
+        <!--validation-->
+        <script>
+            $(document).ready(function () {
+                $(".valid").hide();
+                $(".valid_3").hide();
+                $("#company_name ").keyup(function () {
+                    if (!this.value) {
+                        alert("Please Add the Company Name");
+                        $(".valid").hide();
+                    } else {
+                        $(".valid").show();
+                    }
+                });
+                $("#ext1 ").keyup(function () {
+                    if (!this.value) {
+                        alert("Please Add atleat One number");
+                        $(".valid_3").hide();
+                    } else {
+                        $(".valid_3").show();
+                    }
+                });
+            });
+        </script>
+        <!--//submission-->
+        <script>
+            $(document).ready(function () {
+                $("#ext1").attr("disabled", "disabled");
+                $("#ext2").attr("disabled", "disabled");
+                $("input.extension").click(function () {
+                    if ($(this).prop("checked") == true) {
+                        console.log("Checkbox is checked.");
+                        $("#ext1").removeAttr("disabled");
+                        $("#ext2").removeAttr("disabled");
+                    } else if ($(this).prop("checked") == false) {
+                        console.log("Checkbox is unchecked.");
+                        $("#ext1").attr("disabled", "disabled");
+                        $("#ext2").attr("disabled", "disabled");
+                    }
+                });
+            });
+
+            $(document).ready(function () {
+                $("#rem_1").remove();
+                $("#rem_").remove();
+
+                $("#radioID").change(function () {
+                    $("#rem_1").remove();
+                    $("#rem_").remove();
+                    if ($(this).is(":checked")) {
+                        var val = $(this).val();
+                        console.log(val);
+                        if (val == "on")
+                            $("#spanish_play_1").html(
+                                `<label id="rem_" for="bio">Type here your Spanish message<textarea id="message_play" name="message_play"></textarea></label>`
+                            );
+                        $("#english_play_1").html(
+                            `<label id="rem_1" for="bio">Type here your English message<textarea id="message_play_1" name="message_play_1"></textarea></label>`
+                        );
+                    }
+                });
+                $("#radioID2").change(function () {
+                    $("#rem_1").remove();
+                    $("#rem_").remove();
+
+                    if ($(this).is(":checked")) {
+                        var val = $(this).val();
+                        console.log(val);
+                        if (val == "off")
+                            $("#english_play_1").html(
+                                `<label id="rem_1" for="bio">Type here your English message<textarea id="message_play_1" name="message_play_1"></textarea></label>`
+                            );
+                    }
+                });
+
+                $("#submission").click(function (event) {
+                    event.preventDefault();
+                    var form = $("#msform")[0];
+                    var data = new FormData(form);
+                    data.append(
+                        "CustomField",
+                        "This is some extra data, testing"
+                    );
+                    $.ajax({
+                        type: "POST",
+                        enctype: "multipart/form-data",
+                        url: "mutiple_step_ajax.php",
+                        data: data,
+                        processData: false,
+                        contentType: false,
+                        cache: false,
+                        timeout: 600000,
+                        success: function (data) {
+                            console.log(data);
+                            var obj = JSON.parse(data);
+                            if (obj.status == "200") {
+                                alert("Flow Data Inserted");
+                                window.location.href = "User/user_view.php";
+                            } else {
+                                alert("something went wront try later");
+                            }
+                        },
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
