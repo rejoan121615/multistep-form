@@ -1,27 +1,26 @@
-
 * {
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 html {
-    height: 100%
+    height: 100%;
 }
 
 p {
-    color: grey
+    color: grey;
 }
 
 #heading {
     text-transform: uppercase;
-    color: #673AB7;
-    font-weight: normal
+    color: #673ab7;
+    font-weight: normal;
 }
 
 #msform {
     text-align: center;
     position: relative;
-    margin-top: 20px
+    margin-top: 20px;
 }
 
 #msform fieldset {
@@ -32,15 +31,15 @@ p {
     width: 100%;
     margin: 0;
     padding-bottom: 20px;
-    position: relative
+    position: relative;
 }
 
 .form-card {
-    text-align: left
+    text-align: left;
 }
 
 #msform fieldset:not(:first-of-type) {
-    display: none
+    display: none;
 }
 
 #msform input,
@@ -53,10 +52,10 @@ p {
     width: 100%;
     box-sizing: border-box;
     font-family: montserrat;
-    color: #2C3E50;
-    background-color: #ECEFF1;
+    color: #2c3e50;
+    background-color: #eceff1;
     font-size: 16px;
-    letter-spacing: 1px
+    letter-spacing: 1px;
 }
 
 #msform input:focus,
@@ -64,13 +63,13 @@ p {
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
-    border: 1px solid #673AB7;
-    outline-width: 0
+    border: 1px solid #673ab7;
+    outline-width: 0;
 }
 
 #msform .action-button {
     width: 100px;
-    background: #673AB7;
+    background: #673ab7;
     font-weight: bold;
     color: white;
     border: 0 none;
@@ -78,12 +77,12 @@ p {
     cursor: pointer;
     padding: 10px 5px;
     margin: 10px 0px 10px 5px;
-    float: right
+    float: right;
 }
 
 #msform .action-button:hover,
 #msform .action-button:focus {
-    background-color: #311B92
+    background-color: #311b92;
 }
 
 #msform .action-button-previous {
@@ -96,31 +95,31 @@ p {
     cursor: pointer;
     padding: 10px 5px;
     margin: 10px 5px 10px 0px;
-    float: right
+    float: right;
 }
 
 #msform .action-button-previous:hover,
 #msform .action-button-previous:focus {
-    background-color: #000000
+    background-color: #000000;
 }
 
 .card {
     z-index: 0;
     border: none;
-    position: relative
+    position: relative;
 }
 
 .fs-title {
     font-size: 15px;
-    color: #673AB7;
+    color: #673ab7;
     margin-bottom: 15px;
     font-weight: normal;
-    text-align: left
+    text-align: left;
 }
 
 .purple-text {
-    color: #673AB7;
-    font-weight: normal
+    color: #673ab7;
+    font-weight: normal;
 }
 
 .steps {
@@ -128,22 +127,22 @@ p {
     color: gray;
     margin-bottom: 10px;
     font-weight: normal;
-    text-align: right
+    text-align: right;
 }
 
 .fieldlabels {
     color: gray;
-    text-align: left
+    text-align: left;
 }
 
 #progressbar {
     margin-bottom: 30px;
     overflow: hidden;
-    color: lightgrey
+    color: lightgrey;
 }
 
 #progressbar .active {
-    color: #673AB7
+    color: #673ab7;
 }
 
 #progressbar li {
@@ -152,34 +151,33 @@ p {
     width: 20%;
     float: left;
     position: relative;
-    font-weight: 400
+    font-weight: 400;
 }
 
 #progressbar #account:before {
     font-family: FontAwesome;
-    content: "\f531"
+    content: "\f531";
 }
 
 #progressbar #personal:before {
     font-family: FontAwesome;
-    content: "\f64a"
+    content: "\f64a";
 }
 
 #progressbar #payment:before {
     font-family: FontAwesome;
-    content: "\f1ab"
+    content: "\f1ab";
 }
 
 #progressbar #exxtension:before {
     font-family: FontAwesome;
-    content: "\f00c"
+    content: "\f00c";
 }
 
 #progressbar #confirm:before {
     font-family: FontAwesome;
-    content: "\f00c"
+    content: "\f00c";
 }
-
 
 #progressbar li:before {
     width: 50px;
@@ -191,40 +189,53 @@ p {
     background: lightgray;
     border-radius: 50%;
     margin: 0 auto 10px auto;
-    padding: 2px
+    padding: 2px;
 }
 
 #progressbar li:after {
-    content: '';
+    content: "";
     width: 100%;
     height: 2px;
     background: lightgray;
     position: absolute;
     left: 0;
     top: 25px;
-    z-index: -1
+    z-index: -1;
 }
 
 #progressbar li.active:before,
 #progressbar li.active:after {
-    background: #673AB7
+    background: #673ab7;
 }
 
 .progress {
-    height: 20px
+    height: 20px;
 }
 
 .progress-bar {
-    background-color: #673AB7
+    background-color: #673ab7;
 }
 
 .fit-image {
     width: 100%;
-    object-fit: cover
+    object-fit: cover;
 }
 #mycheck[type="checkbox"] {
     max-inline-size: max-content;
 }
 input#mycheck {
     -webkit-transform: scale(1.3);
+}
+
+/* extension style  */
+.btn-primary-ext {
+    background: #673ab7;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    width: 100%;
+    /* margin: 10px 0px 10px 5px; */
 }
