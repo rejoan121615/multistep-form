@@ -278,6 +278,7 @@
                                     /></label>
                                     <!-- extension setting  -->
                                     <div id="ext-selec-btns">
+                                        <p>Select Ext to Setup</p>
                                         <div class="row mb-3 no-gutters">
                                             <div class="col-4 px-1">
                                                 <button class="btn-primary-ext">
@@ -339,6 +340,134 @@
                                                 <button class="btn-primary-ext">
                                                     Ext 110
                                                 </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="ext-setting-panel">
+                                        <p>Extension Setting</p>
+                                        <div class="row no-gutters">
+                                            <label class="fieldlabels col-1">
+                                                Ext
+                                                <div class="ext-number">
+                                                    100
+                                                </div>
+                                            </label>
+                                            <div class="col-11">
+                                                <div
+                                                    class="row no-gutters justify-content-between"
+                                                >
+                                                    <label
+                                                        class="fieldlabels col-1 mr-2"
+                                                    >
+                                                        Active
+                                                        <input
+                                                            type="checkbox"
+                                                            id="ext-setting-active"
+                                                            name="ext_active"
+                                                        />
+                                                    </label>
+                                                    <div
+                                                        class="row no-gutters col-10"
+                                                    >
+                                                        <div
+                                                            class="col-12 row no-gutters"
+                                                        >
+                                                            <label
+                                                                class="fieldlabels mr-2 col"
+                                                            >
+                                                                Description
+                                                                <input
+                                                                    type="text"
+                                                                    id="ext_description"
+                                                                    name="ext_description"
+                                                                    class="mb-0"
+                                                                />
+                                                            </label>
+                                                            <label
+                                                                class="fieldlabels col"
+                                                            >
+                                                                Forward To Tel
+                                                                Number
+                                                                <input
+                                                                    type="text"
+                                                                    id="ext_forward_to"
+                                                                    name="ext_forward_to"
+                                                                    class="mb-0"
+                                                                />
+                                                            </label>
+                                                        </div>
+                                                        <!-- no answer  -->
+                                                        <div class="col-12 mb-4 ">
+                                                            <p>No Answer</p>
+                                                            <div
+                                                                class="row no-gutters justify-content-between"
+                                                            >
+                                                                <label
+                                                                    class="fieldlabels"
+                                                                >
+                                                                    IVR
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        name="ext_ivr"
+                                                                        id="ext_ivr"
+                                                                        class="mb-0"
+                                                                    />
+                                                                </label>
+                                                                <label
+                                                                    class="fieldlabels"
+                                                                >
+                                                                    Vmail
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        name="ext_vmail"
+                                                                        id="ext_vmail"
+                                                                        class="mb-0"
+                                                                    />
+                                                                </label>
+                                                                <label
+                                                                    class="fieldlabels"
+                                                                >
+                                                                    Forward To
+                                                                    <input
+                                                                        type="text"
+                                                                        name="ext_forward_to"
+                                                                        id="ext_forward_to"
+                                                                        class="mb-0"
+                                                                    />
+                                                                </label>
+                                                                <label
+                                                                    class="fieldlabels"
+                                                                >
+                                                                    Hang Up
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        name="ext_hang_up"
+                                                                        id="ext_hang_up"
+                                                                    />
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <!-- voice mail  -->
+                                                        <div class="col-12">
+                                                            <label
+                                                                class="fieldlabels"
+                                                            >
+                                                                Voice Mail Box
+                                                                Setting
+                                                                <input
+                                                                    type="text"
+                                                                    name="voice_mail"
+                                                                    id="voice_mail"
+                                                                />
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="row no-gutters justify-content-between"
+                                                >
+                                                <label for=""></label>
+                                            </div>
                                             </div>
                                         </div>
                                     </div>
@@ -498,7 +627,6 @@
                 });
             });
             //# sourceURL=pen.js
-            
         </script>
         <!--validation-->
         <script>
@@ -520,6 +648,15 @@
                     } else {
                         $(".valid_3").show();
                     }
+                });
+
+                // ext select options
+                $("#ext-selec-btns button").click((e) => {
+                    e.preventDefault();
+                    $("#ext-selec-btns button").removeClass("active");
+                    $(e.target).addClass("active");
+                    // ext setting panel
+                    $("#ext-setting-panel").show();
                 });
             });
         </script>

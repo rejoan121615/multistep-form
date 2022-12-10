@@ -229,7 +229,7 @@ input#mycheck {
 
 /* extension style  */
 .btn-primary-ext {
-    background: #673ab7;
+    background: #616161;
     font-weight: bold;
     color: white;
     border: 0 none;
@@ -238,4 +238,12 @@ input#mycheck {
     padding: 10px 5px;
     width: 100%;
     /* margin: 10px 0px 10px 5px; */
+}
+
+.btn-primary-ext.active {
+    background-color: #673ab7;
+}
+
+#ext-setting-panel {
+    /* display: none; */
 }
