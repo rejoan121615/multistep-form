@@ -597,9 +597,8 @@
                                         </p>
                                         <div class="row no-gutters">
                                             <label class="fieldlabels col-1">
-                                                Ext
                                                 <div class="ext-number">
-                                                    100
+                                                    Ext 0
                                                 </div>
                                             </label>
                                             <div class="col-11">
@@ -1019,24 +1018,32 @@
                 });
 
                 // ext select options
-                $("#ext-selec-btns button").click((e) => {
+                let prevClick = null;
+                $("#ext-selec-btns button").click((e, index) => {
                     e.preventDefault();
-                    $("#ext-selec-btns button").removeClass("active");
-                    $(e.target).addClass("active");
-                    // ext setting panel
-                    $("#ext-setting-panel").show();
+                    if (e.target.innerText === prevClick) {
+                        $(e.target).toggleClass("active");
+                        $("#ext-setting-panel").toggle()
+                    } else {
+                        $("#ext-selec-btns button").removeClass("active");
+                        $(e.target).addClass("active");
+                        $(".ext-number").text($(e.target).text());
+                        $("#ext-setting-panel").show();
+                    }
+
+                    prevClick = e.target.innerText;
                 });
                 // panel save
-                $("#ext_setup_panel_save").click(function (e) {
-                    e.preventDefault();
-                    alert('add save query');
-                });
+                // $("#ext_setup_panel_save").click(function (e) {
+                //     e.preventDefault();
+                //     alert('add save query');
+                // });
                 // panel cancel
-                $("#ext_setup_panel_cancel").click(function (e) {
-                    e.preventDefault();
-                    $("#ext-selec-btns button").removeClass("active");
-                    $("#ext-setting-panel").hide();
-                });
+                // $("#ext_setup_panel_cancel").click(function (e) {
+                //     e.preventDefault();
+                //     $("#ext-selec-btns button").removeClass("active");
+                //     $("#ext-setting-panel").hide();
+                // });
             });
         </script>
         <!--//submission-->
