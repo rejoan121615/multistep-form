@@ -650,10 +650,10 @@
                                                         </div>
                                                         <!-- no answer  -->
                                                         <div
-                                                            class="col-12 mb-4 d-flex "
+                                                            class="col-12 mb-4 d-flex"
                                                         >
                                                             <label
-                                                                class="fieldlabels w-25 mr-2 "
+                                                                class="fieldlabels w-25 mr-2"
                                                             >
                                                                 If No Answer
                                                                 <select
@@ -678,13 +678,13 @@
                                                                 </select>
                                                             </label>
                                                             <label
-                                                                class="fieldlabels w-75 "
+                                                                class="fieldlabels w-75"
                                                             >
                                                                 Forward To
                                                                 <input
                                                                     type="text"
-                                                                    name="ext_forward_to"
-                                                                    id="ext_forward_to"
+                                                                    name="ext_ivr_vmail_forward_to"
+                                                                    id="ext_ivr_vmail_forward_to"
                                                                     class="mb-0"
                                                                 />
                                                             </label>
@@ -1008,7 +1008,7 @@
                     }
                 });
 
-                // ext select options
+                // new extention  select options --------------------------
                 let prevClick = null;
                 $("#ext-selec-btns button").click((e, index) => {
                     e.preventDefault();
@@ -1023,6 +1023,16 @@
                     }
 
                     prevClick = e.target.innerText;
+                });
+                // if no answer validation
+                $("#if_no_answer").click(function (e) {
+                    console.log(e.target);
+                    console.log(e.target.value);
+                    if (e.target.value === "hang_up") {
+                        $("#ext_ivr_vmail_forward_to").prop("disabled", true);
+                    } else {
+                        $("#ext_ivr_vmail_forward_to").prop("disabled", false);
+                    }
                 });
                 // panel save
                 // $("#ext_setup_panel_save").click(function (e) {
