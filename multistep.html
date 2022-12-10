@@ -56,7 +56,8 @@
             }
 
             #msform input,
-            #msform textarea {
+            #msform textarea,
+            #msform select {
                 padding: 8px 15px 8px 15px;
                 border: 1px solid #ccc;
                 border-radius: 0px;
@@ -79,7 +80,9 @@
                 border: 1px solid #673ab7;
                 outline-width: 0;
             }
-
+            #msform select {
+                height: 42px;
+            }
             #msform .action-button {
                 width: 100px;
                 background: #673ab7;
@@ -647,56 +650,44 @@
                                                         </div>
                                                         <!-- no answer  -->
                                                         <div
-                                                            class="col-12 mb-4"
+                                                            class="col-12 mb-4 d-flex "
                                                         >
-                                                            <p>No Answer</p>
-                                                            <div
-                                                                class="row no-gutters justify-content-between"
+                                                            <label
+                                                                class="fieldlabels w-25 mr-2 "
                                                             >
-                                                                <label
-                                                                    class="fieldlabels"
+                                                                If No Answer
+                                                                <select
+                                                                    name="if_no_answer"
+                                                                    id="if_no_answer"
                                                                 >
-                                                                    IVR
-                                                                    <input
-                                                                        type="checkbox"
-                                                                        name="ext_ivr"
-                                                                        id="ext_ivr"
-                                                                        class="mb-0"
-                                                                    />
-                                                                </label>
-                                                                <label
-                                                                    class="fieldlabels"
-                                                                >
-                                                                    Vmail
-                                                                    <input
-                                                                        type="checkbox"
-                                                                        name="ext_vmail"
-                                                                        id="ext_vmail"
-                                                                        class="mb-0"
-                                                                    />
-                                                                </label>
-                                                                <label
-                                                                    class="fieldlabels"
-                                                                >
-                                                                    Forward To
-                                                                    <input
-                                                                        type="text"
-                                                                        name="ext_forward_to"
-                                                                        id="ext_forward_to"
-                                                                        class="mb-0"
-                                                                    />
-                                                                </label>
-                                                                <label
-                                                                    class="fieldlabels"
-                                                                >
-                                                                    Hang Up
-                                                                    <input
-                                                                        type="checkbox"
-                                                                        name="ext_hang_up"
-                                                                        id="ext_hang_up"
-                                                                    />
-                                                                </label>
-                                                            </div>
+                                                                    <option
+                                                                        value="ivr"
+                                                                    >
+                                                                        Ivr
+                                                                    </option>
+                                                                    <option
+                                                                        value="vmail"
+                                                                    >
+                                                                        Vmail
+                                                                    </option>
+                                                                    <option
+                                                                        value="hang_up"
+                                                                    >
+                                                                        Hang Up
+                                                                    </option>
+                                                                </select>
+                                                            </label>
+                                                            <label
+                                                                class="fieldlabels w-75 "
+                                                            >
+                                                                Forward To
+                                                                <input
+                                                                    type="text"
+                                                                    name="ext_forward_to"
+                                                                    id="ext_forward_to"
+                                                                    class="mb-0"
+                                                                />
+                                                            </label>
                                                         </div>
                                                         <!-- voice mail  -->
                                                         <div class="col-12">
@@ -1023,7 +1014,7 @@
                     e.preventDefault();
                     if (e.target.innerText === prevClick) {
                         $(e.target).toggleClass("active");
-                        $("#ext-setting-panel").toggle()
+                        $("#ext-setting-panel").toggle();
                     } else {
                         $("#ext-selec-btns button").removeClass("active");
                         $(e.target).addClass("active");
