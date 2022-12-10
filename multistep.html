@@ -344,7 +344,7 @@
                                         </div>
                                     </div>
                                     <div id="ext-setting-panel">
-                                        <p>Extension Setting</p>
+                                        <p class=" font-weight-bold ">Extension Setting</p>
                                         <div class="row no-gutters">
                                             <label class="fieldlabels col-1">
                                                 Ext
@@ -397,7 +397,9 @@
                                                             </label>
                                                         </div>
                                                         <!-- no answer  -->
-                                                        <div class="col-12 mb-4 ">
+                                                        <div
+                                                            class="col-12 mb-4"
+                                                        >
                                                             <p>No Answer</p>
                                                             <div
                                                                 class="row no-gutters justify-content-between"
@@ -463,12 +465,114 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div
-                                                    class="row no-gutters justify-content-between"
-                                                >
-                                                <label for=""></label>
+                                                <!-- greeting and name  -->
+                                                <div>
+                                                    <p class=" font-weight-bold ">Greeting & Name</p>
+                                                    <div
+                                                        class="row no-gutters justify-content-between"
+                                                    >
+                                                        <label
+                                                            class="fieldlabels col-1 mr-2"
+                                                        >
+                                                            Active
+                                                            <input
+                                                                type="checkbox"
+                                                                name="ext_greet_email_active"
+                                                                id="ext_greet_email_active"
+                                                            />
+                                                        </label>
+                                                        <div
+                                                            class="row no-gutters col-10 justify-content-between"
+                                                        >
+                                                            <label
+                                                                class="fieldlabels col-9"
+                                                            >
+                                                                Email
+                                                                <input
+                                                                    type="text"
+                                                                    name="ext_greet_email"
+                                                                    id="ext_greet_email"
+                                                                />
+                                                            </label>
+                                                            <label
+                                                                class="fieldlabels col-1"
+                                                            >
+                                                                Audio
+                                                                <input
+                                                                    type="checkbox"
+                                                                    name="ext_greet_email_audio"
+                                                                    id="ext_greet_email_audio"
+                                                                /> </label
+                                                            ><label
+                                                                class="fieldlabels col-1"
+                                                            >
+                                                                Text
+                                                                <input
+                                                                    type="checkbox"
+                                                                    name="ext_greet_email_txt"
+                                                                    id="ext_greet_email_txt"
+                                                                />
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- voice mail sms setting  -->
+                                                <div>
+                                                    <p class=" font-weight-bold ">Voice Mail SMS Setting</p>
+                                                    <div
+                                                        class="row no-gutters justify-content-between"
+                                                    >
+                                                        <label
+                                                            class="fieldlabels col-1 mr-2"
+                                                        >
+                                                            Active
+                                                            <input
+                                                                type="checkbox"
+                                                                name="ext_voice_sms_active"
+                                                                id="ext_voice_sms_active"
+                                                            />
+                                                        </label>
+                                                        <div
+                                                            class="row no-gutters col-10 justify-content-between"
+                                                        >
+                                                            <label
+                                                                class="fieldlabels col-9"
+                                                            >
+                                                                Mobile Number
+                                                                <input
+                                                                    type="text"
+                                                                    name="ext_v_mail_mobile"
+                                                                    id="ext_v_mail_mobile"
+                                                                />
+                                                            </label>
+                                                            <label
+                                                                class="fieldlabels col-1"
+                                                            >
+                                                                Audio
+                                                                <input
+                                                                    type="checkbox"
+                                                                    name="ext_v_mail_audio"
+                                                                    id="ext_v_mail_audio"
+                                                                /> </label
+                                                            ><label
+                                                                class="fieldlabels col-1"
+                                                            >
+                                                                Text
+                                                                <input
+                                                                    type="checkbox"
+                                                                    name="ext_v_mail_txt"
+                                                                    id="ext_v_mail_txt"
+                                                                />
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            </div>
+                                        </div>
+                                        <!-- extension control btns  -->
+                                        <div class=" mb-3 text-right ">
+                                            <button id="ext_setup_panel_cancel" class=" px-4 btn btn-danger ">Cancel</button>
+                                            <button id="ext_setup_panel_save" class=" px-4 btn btn-success ml-2 mr-2 ">Save</button>
                                         </div>
                                     </div>
                                 </div>
@@ -658,6 +762,17 @@
                     // ext setting panel
                     $("#ext-setting-panel").show();
                 });
+                // panel save 
+                $("#ext_setup_panel_save").click( function (e) {
+                    e.preventDefault();
+
+                })
+                // panel cancel 
+                $("#ext_setup_panel_cancel").click( function (e) {
+                    e.preventDefault();
+                   $("#ext-selec-btns button").removeClass("active");
+                    $("#ext-setting-panel").hide() 
+                })
             });
         </script>
         <!--//submission-->
