@@ -261,6 +261,9 @@
             #ext-setting-panel {
                 display: none;
             }
+            .gree_name_voice_wrap {
+                display: none;
+            }
         </style>
         <script>
             window.console = window.console || function (t) {};
@@ -277,7 +280,7 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div
-                    class="col-11 col-sm-10 col-md-10 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2"
+                    class="col-11 col-sm-10 col-md-10 col-lg-8 col-xl-7 text-center p-0 mt-3 mb-2"
                 >
                     <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
                         <h2 id="heading">Setup your Flow For Number:</h2>
@@ -705,109 +708,117 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <!-- greeting and name  -->
-                                                <div>
-                                                    <p class="font-weight-bold">
-                                                        Greeting & Name
-                                                    </p>
-                                                    <div
-                                                        class="row no-gutters justify-content-between"
-                                                    >
-                                                        <label
-                                                            class="fieldlabels col-1 mr-2"
+                                                <div class=" gree_name_voice_wrap">
+                                                    <!-- greeting and name  -->
+                                                    <div>
+                                                        <p
+                                                            class="font-weight-bold"
                                                         >
-                                                            Active
-                                                            <input
-                                                                type="checkbox"
-                                                                name="ext_greet_email_active"
-                                                                id="ext_greet_email_active"
-                                                            />
-                                                        </label>
+                                                            Greeting & Name
+                                                        </p>
                                                         <div
-                                                            class="row no-gutters col-10 justify-content-between"
+                                                            class="row no-gutters justify-content-between"
                                                         >
                                                             <label
-                                                                class="fieldlabels col-9"
+                                                                class="fieldlabels col-1 mr-2"
                                                             >
-                                                                Email
-                                                                <input
-                                                                    type="text"
-                                                                    name="ext_greet_email"
-                                                                    id="ext_greet_email"
-                                                                />
-                                                            </label>
-                                                            <label
-                                                                class="fieldlabels col-1"
-                                                            >
-                                                                Audio
+                                                                Active
                                                                 <input
                                                                     type="checkbox"
-                                                                    name="ext_greet_email_audio"
-                                                                    id="ext_greet_email_audio"
-                                                                /> </label
-                                                            ><label
-                                                                class="fieldlabels col-1"
-                                                            >
-                                                                Text
-                                                                <input
-                                                                    type="checkbox"
-                                                                    name="ext_greet_email_txt"
-                                                                    id="ext_greet_email_txt"
+                                                                    name="ext_greet_email_active"
+                                                                    id="ext_greet_email_active"
                                                                 />
                                                             </label>
+                                                            <div
+                                                                class="row no-gutters col-10 justify-content-between"
+                                                            >
+                                                                <label
+                                                                    class="fieldlabels col-9"
+                                                                >
+                                                                    Email
+                                                                    <input
+                                                                        type="text"
+                                                                        name="ext_greet_email"
+                                                                        id="ext_greet_email"
+                                                                    />
+                                                                </label>
+                                                                <label
+                                                                    class="fieldlabels col-1"
+                                                                >
+                                                                    Audio
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        name="ext_greet_email_audio"
+                                                                        id="ext_greet_email_audio"
+                                                                    /> </label
+                                                                ><label
+                                                                    class="fieldlabels col-1"
+                                                                >
+                                                                    Text
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        name="ext_greet_email_txt"
+                                                                        id="ext_greet_email_txt"
+                                                                    />
+                                                                </label>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <!-- voice mail sms setting  -->
-                                                <div>
-                                                    <p class="font-weight-bold">
-                                                        Voice Mail SMS Setting
-                                                    </p>
-                                                    <div
-                                                        class="row no-gutters justify-content-between"
-                                                    >
-                                                        <label
-                                                            class="fieldlabels col-1 mr-2"
+                                                    <!-- voice mail sms setting  -->
+                                                    <div>
+                                                        <p
+                                                            class="font-weight-bold"
                                                         >
-                                                            Active
-                                                            <input
-                                                                type="checkbox"
-                                                                name="ext_voice_sms_active"
-                                                                id="ext_voice_sms_active"
-                                                            />
-                                                        </label>
+                                                            Voice Mail SMS
+                                                            Setting
+                                                        </p>
                                                         <div
-                                                            class="row no-gutters col-10 justify-content-between"
+                                                            class="row no-gutters justify-content-between"
                                                         >
                                                             <label
-                                                                class="fieldlabels col-9"
+                                                                class="fieldlabels col-1 mr-2"
                                                             >
-                                                                Mobile Number
-                                                                <input
-                                                                    type="text"
-                                                                    name="ext_v_mail_mobile"
-                                                                    id="ext_v_mail_mobile"
-                                                                />
-                                                            </label>
-                                                            <label
-                                                                class="fieldlabels col-1"
-                                                            >
-                                                                Audio
+                                                                Active
                                                                 <input
                                                                     type="checkbox"
-                                                                    name="ext_v_mail_audio"
-                                                                    id="ext_v_mail_audio"
-                                                                /> </label
-                                                            ><label
-                                                                class="fieldlabels col-1"
-                                                            >
-                                                                Text
-                                                                <input
-                                                                    type="checkbox"
-                                                                    name="ext_v_mail_txt"
-                                                                    id="ext_v_mail_txt"
+                                                                    name="ext_voice_sms_active"
+                                                                    id="ext_voice_sms_active"
                                                                 />
                                                             </label>
+                                                            <div
+                                                                class="row no-gutters col-10 justify-content-between"
+                                                            >
+                                                                <label
+                                                                    class="fieldlabels col-9"
+                                                                >
+                                                                    Mobile
+                                                                    Number
+                                                                    <input
+                                                                        type="text"
+                                                                        name="ext_v_mail_mobile"
+                                                                        id="ext_v_mail_mobile"
+                                                                    />
+                                                                </label>
+                                                                <label
+                                                                    class="fieldlabels col-1"
+                                                                >
+                                                                    Audio
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        name="ext_v_mail_audio"
+                                                                        id="ext_v_mail_audio"
+                                                                    /> </label
+                                                                ><label
+                                                                    class="fieldlabels col-1"
+                                                                >
+                                                                    Text
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        name="ext_v_mail_txt"
+                                                                        id="ext_v_mail_txt"
+                                                                    />
+                                                                </label>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1030,7 +1041,11 @@
                     console.log(e.target.value);
                     if (e.target.value === "hang_up") {
                         $("#ext_ivr_vmail_forward_to").prop("disabled", true);
+                        $('.gree_name_voice_wrap').fadeOut();
+                    } else if (e.target.value === 'vmail') {
+                        $('.gree_name_voice_wrap').fadeIn();
                     } else {
+                        $('.gree_name_voice_wrap').fadeOut();
                         $("#ext_ivr_vmail_forward_to").prop("disabled", false);
                     }
                 });
